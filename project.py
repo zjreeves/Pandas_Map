@@ -3,11 +3,11 @@ import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-#import geopandas as gpd
+import geopandas as gpd
 
 #Loads data from specified path
-#shp_file = "data\tl_2010_us_state10\tl_2010_us_state10.shp"
-#map_frame = gpd.read_file(shp_file)
+shp_file = "data\tl_2010_us_state10\tl_2010_us_state10.shp"
+map_frame = gpd.read_file(shp_file)
 
 #Plots the United States
 map_frame.plot()
@@ -31,7 +31,7 @@ vmin, vmax = 500000, 37000000
 fig, ax = plt.subplot(1, figsize=(15, 10))
 
 #Creating map
-merge.plot(column=item, cmap='Reds', linewidth=1.0 ax=ax, edgecolor='0.8')
+merge.plot(column=item, cmap='Reds', linewidth=1.0, ax=ax, edgecolor='0.8')
 
 #Removing the axis
 ax.axis('off')
